@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Christoffer Staupe</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap">
+
+    <style>
+      h1{
+        font-family: 'Playfair Display', serif;
+      }
+
+    </style>
+  </head>
+
+<header>
+  <h1>Gruppe 12-A</h1>
+</header>
+
+<body>
+  <div class="navbar">
+    <a href="index.html"> <img src="images/home.png" alt="Hjem icon"> Hjem</a>
+    <a href="1_Truls_Iversen.html">Truls Iversen</a>
+    <a href="2_Lene_Olsen.html">Lene Olsen</a>
+    <a href="3_Alex_Dimopoulos.html">Alex Dimopoulos</a>
+    <a href="4_Marius_Horni.html">Marius Horni</a>
+    <a class="active" href="5_Christoffer_Staupe.html">Christoffer Staupe</a>
+    <a href="6_Isak_Galleberg.html">Isak Galleberg</a>
+  </div>
+
+  <div class="innhold-posisjon">
+
+    <p class="profil-text">
+      <img class="profil-bilde"src="images/christoffer-profil.png" alt="profile placholder">
+      -Christoffer Staupe <br>
+      -Universitetet i Agder <br>
+      -IT & informasjonssytemer
+    </p>
+
+  </div>
+
+  <div class="innhold-posisjon">
+    <h2>Om Christoffer!</h2>
+    <p>Jeg heter Christoffer Staupe og er 21 år gammel. På fritiden min liker jeg
+       å spille fotball og trene styrke. Jeg er født og oppvokst i Haugesund og
+      flyttet til Kristiansand for et halvt år siden for å studere IT.
+    </p>
+    
+    <div class="innhold-posisjon">
+
+      <h2>Kreativ figur</h2>
+
+      <a href="https://github.com/Christofferns/Figur" target="_blank">
+        <canvas id="christoffer-figur" width="200" height="200" >
+          <script src="js/5-Cristoffer-staupe-figur.js"></script>
+        </canvas>
+      </a>
+  
+      <a href="https://github.com/Christofferns/Figur" target="_blank">
+        <svg id="svg" height="200" width="200"></svg>
+        <script>
+
+            function rectangleSvg(x, y, width, height, style, id) {
+            var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            rect.setAttribute("x", x);
+            rect.setAttribute("y", y);
+            rect.setAttribute("width", width);
+            rect.setAttribute("height", height);
+            rect.setAttribute("style", style);
+
+            document.getElementById(id).appendChild(rect);
+        }
+
+        // Function for circle in SVG
+        function circleSvg(x, y, r, style, id) {
+            var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", x);
+            circle.setAttribute("cy", y);
+            circle.setAttribute("r", r);
+            circle.setAttribute("style", style);
+
+            document.getElementById(id).appendChild(circle);
+        }
+
+        // Drawing rectangles and circles in different sizes and positions
+        rectangleSvg(0, 0, 200, 200, "fill:blue", "svg");
+        rectangleSvg(95, 95, 20, 20, "fill:black", "svg");
+        rectangleSvg(65, 140, 83, 10, "fill:red", "svg");
+
+        circleSvg(65, 70, 20, "fill:red", "svg");
+        circleSvg(140, 70, 20, "fill:red", "svg");
+        </script>
+      </a>
+    </div>
+
+    <div class="innhold-posisjon">
+      <h2>KlimaFotavtrykk ProgOblig-2</h2>
+
+      <p>Jeg bidrar mest til forurensing med bil, da jeg regelmessig bruker den
+         som mitt foretrukne transportmiddel, noe som resulterer i utslipp av
+         skadelige stoffer og bidrar til den økende miljøpåvirkningen fra veitrafikken.
+      </p>
+
+      <img src="images/chart-truls.png" alt="Bar-Chart Hentet fra progoblig 2" style="width:600px; height:400px;">
+      <p><i><b>Bar-chart hentet fra ProgOblig2 etter ønsket fra oppgaven og har ikke noe samnheng med vår egen drøfting.</b></i></p>
+    
+    </div>
+
+
+</body>
+</html>
