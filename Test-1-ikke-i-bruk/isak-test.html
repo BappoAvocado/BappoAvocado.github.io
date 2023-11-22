@@ -1,0 +1,101 @@
+<br>
+<br>
+<canvas id="myCanvas" 
+    style='background-color:transparent'
+    width='200' height='200'></canvas>
+
+<script>
+
+const el=document.getElementById('myCanvas');
+const ctx=el.getContext('2d');
+
+//TopLeft:
+//Colors:
+
+//TLBase
+ctx.beginPath()
+ctx.rect(0, 0, 100, 100);
+ctx.fillStyle="green"
+ctx.fill();
+
+//Neck:
+//Neck Color:
+ctx.beginPath()
+ctx.rect(40, 80, 27, 20);
+ctx.fillStyle="orange"
+ctx.fill();
+//Neck Outline 1:
+ctx.beginPath()
+ctx.rect(40, 80, 3, 20);
+ctx.fillStyle="black"
+ctx.fill();
+//Neck Outline 2:
+ctx.beginPath()
+ctx.rect(66, 80, 3, 20);
+ctx.fillStyle="black"
+ctx.fill();
+
+//Face:
+//Face Outline:
+ctx.beginPath()
+ctx.arc(52, 65, 25, 0, 2*Math.PI);
+ctx.fillStyle="black"
+ctx.fill();
+//Face Color:
+ctx.beginPath()
+ctx.arc(52, 65, 22, 0, 2*Math.PI);
+ctx.fillStyle="orange"
+ctx.fill();
+
+//Face Details:
+//Nose:
+ctx.beginPath()
+ctx.arc(49, 69, 4, 0, 2*Math.PI);
+ctx.fillStyle="black"
+ctx.fill();
+//Mouth:
+ctx.beginPath()
+ctx.rect(50, 80, 7, 2);
+ctx.fillStyle="black"
+ctx.fill();
+//Left Eye:
+ctx.beginPath()
+ctx.arc(42, 55, 3, 0, 2*Math.PI);
+ctx.fillStyle="black"
+ctx.fill();
+//Right Eye:
+ctx.beginPath()
+ctx.arc(60, 55, 3, 0, 2*Math.PI);
+ctx.fillStyle="black"
+ctx.fill();
+//Whisker 1:
+ctx.save();
+ctx.beginPath()
+ctx.rotate((20 * Math.PI) / 180);
+ctx.rect(57, 45, 7, 2);
+ctx.fillStyle="black"
+ctx.fill();
+ctx.restore();
+//Save/Restore is used to limit the rotation to only this rectangle, not all the code under the command.
+//Whisker 2:
+ctx.save();
+ctx.beginPath()
+ctx.rotate((20 * Math.PI) / 180);
+ctx.rect(75, 47, 7, 2);
+ctx.fillStyle="black"
+ctx.fill();
+ctx.restore();
+//Whisker 3: 
+ctx.save();
+ctx.beginPath()
+ctx.rotate((-20 * Math.PI) / 180);
+ctx.rect(28, 79, 7, 2);
+ctx.fillStyle="black"
+ctx.fill();
+ctx.restore();
+//Whisker 4:
+ctx.save();
+ctx.beginPath()
+ctx.rotate((-20 * Math.PI) / 180);
+ctx.rect(10, 82, 7, 2);
+... (95 lines left)
