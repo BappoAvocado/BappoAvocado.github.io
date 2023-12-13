@@ -5,7 +5,7 @@ ctx.fillStyle = "#FAF9F6";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
 
-function drawEllipse (x, y, color, width, height) {
+function drawCatEye (x, y, color, width, height) {
         ctx.beginPath();
         ctx.rotate((20 * Math.PI) / 180);
           ctx.ellipse(120, 65, 90, 50, 0, 0, 2 * Math.PI);
@@ -46,7 +46,7 @@ function drawEllipse (x, y, color, width, height) {
 
 
 
-        drawEllipse (0, 0,"", 200, 200)
+        drawCatEye (0, 0,"", 200, 200)
 
         canvas.addEventListener("mousemove", function (e) {
           var x = e.pageX - canvas.offsetLeft;
@@ -54,7 +54,7 @@ function drawEllipse (x, y, color, width, height) {
 
           clearCanvas();
 
-          drawEllipse (0, 0,"", 200, 200)
+          drawCatEye (0, 0,"", 200, 200)
 
           drawText(x, y, "Cat Eye!", "20px Arial", "#603FEF");
       });
