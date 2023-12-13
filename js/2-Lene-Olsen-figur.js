@@ -1,69 +1,69 @@
-const canvas = document.getElementById("is_114_art")
-const ctx = canvas.getContext('2d');
-   
- 
 
-        ctx.fillStyle = '#03fcfc';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-		
- ctx.beginPath();
-        ctx.ellipse(100, 100, 63, 32, 0, 0, 2 * Math.PI);
-        ctx.fillStyle = '#402d1c';
-        ctx.fill();
-        ctx.closePath();
-		
- ctx.beginPath();
-        ctx.ellipse(100, 100, 55, 30, 0, 0, 2 * Math.PI);
-        ctx.fillStyle = '#faf5f5';
-        ctx.fill();
-        ctx.closePath();
+const canvas = document.getElementById("is_114_JS-art");
+        const ctx = canvas.getContext('2d');
 
-ctx.beginPath();
-        ctx.arc(100, 100, 28, 0, 2 * Math.PI);
-        ctx.fillStyle = '#402d1c'; // mørk sirkel
-        ctx.fill();
-        ctx.closePath();
-		
+        function drawRectangle(x, y, color, width, height) {
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, width, height);
+        }
 
-  ctx.beginPath();
-        ctx.arc(100, 100, 26, 0, 2 * Math.PI);
-        ctx.fillStyle = '#038c3c'; // grønn sirkel
-        ctx.fill();
-        ctx.closePath();
+        function drawEllipse(x, y, color, rx, ry) {
+            ctx.beginPath();
+            ctx.ellipse(x, y, rx, ry, 0, 0, 2 * Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+            ctx.closePath();
+        }
 
-  ctx.beginPath();
-        ctx.arc(97, 105, 14, 0, 2 * Math.PI);
-        ctx.fillStyle = '#8bf760'; // grønn2 sirkel
-        ctx.fill();
-        ctx.closePath();
-		
+        function drawCircle(x, y, color, radius) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+            ctx.closePath();
+        }
 
-ctx.beginPath();
-        ctx.arc(98, 103, 15, 0, 2 * Math.PI);
-        ctx.fillStyle = '#038c3c'; // grønn sirkel
-        ctx.fill();
-        ctx.closePath();
-		
-ctx.beginPath();
-        ctx.arc(100, 100, 12, 0, 2 * Math.PI);
-        ctx.fillStyle = '#000000'; // sort sirkel
-        ctx.fill();
-        ctx.closePath();
+        function drawText(x, y, text, font, color) {
+            ctx.font = font;
+            ctx.fillStyle = color;
+            ctx.fillText(text, x, y);
+        }
 
-ctx.beginPath();
-        ctx.arc(97, 104, 4, 0, 2 * Math.PI);
-        ctx.fillStyle = '#ffffff'; // hvit sirkel
-        ctx.fill();
-        ctx.closePath();
-		
-ctx.beginPath();
-        ctx.arc(99, 102, 4, 0, 2 * Math.PI);
-        ctx.fillStyle = '#000000'; // sort sirkel
-        ctx.fill();
-        ctx.closePath();
-	
-	ctx.beginPath();
-        ctx.arc(112, 85, 2, 0, 2 * Math.PI);
-        ctx.fillStyle = '#ffffff'; // hvit sirlek
-        ctx.fill();
-        ctx.closePath();
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        drawRectangle(0, 0, '#03fcfc', 200, 200);
+        drawEllipse(100, 100, '#402d1cff', 63, 32);
+        drawEllipse(100, 100, '#faf5f5ff', 55, 30);
+        drawCircle(100, 100, '#402d1cff', 28);
+        drawCircle(100, 100, '#038c3cff', 26);
+        drawCircle(97, 105, '#8bf760ff', 14);
+        drawCircle(98, 103, '#038c3cff', 15);
+        drawCircle(100, 100, '#000000ff', 12);
+        drawCircle(97, 104, '#ffffffff', 4);
+        drawCircle(99, 102, '#000000ff', 4);
+        drawCircle(112, 85, '#ffffffff', 2);
+
+        canvas.addEventListener("mousemove", function (e) {
+            var x = e.pageX - canvas.offsetLeft;
+            var y = e.pageY - canvas.offsetTop;
+
+            clearCanvas();
+
+
+            // Redraw the other shapes
+            drawRectangle(0, 0, '#03fcfc', 200, 200);
+            drawEllipse(100, 100, '#402d1cff', 63, 32);
+            drawEllipse(100, 100, '#faf5f5ff', 55, 30);
+            drawCircle(100, 100, '#402d1cff', 28);
+            drawCircle(100, 100, '#038c3cff', 26);
+            drawCircle(97, 105, '#8bf760ff', 14);
+            drawCircle(98, 103, '#038c3cff', 15);
+            drawCircle(100, 100, '#000000ff', 12);
+            drawCircle(97, 104, '#ffffffff', 4);
+            drawCircle(99, 102, '#000000ff', 4);
+            drawCircle(112, 85, '#ffffffff', 2);
+			
+			            drawText(x, y, "Hello World!", "20px Arial", '#ed09a1');
+        });
